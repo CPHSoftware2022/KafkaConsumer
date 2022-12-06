@@ -11,12 +11,12 @@ import java.io.IOException;
 public class ConsumerService
 {
       private static final Logger logger = LoggerFactory.getLogger(ConsumerService.class);
-      
-      @KafkaListener(topics = {"customer-topic", "another-test-topic"}, groupId = "exam-project")
+
+      @KafkaListener(topics = {"customer-topic", "restaurant-topic","another-test-topic"}, groupId = "exam-project")
       public void consume(String message) throws IOException
       {
             System.out.println("Consumed message:" + message);
             logger.info("&&& Message [{}] consumed", message);
       }
 }
-      
+
