@@ -16,9 +16,11 @@ import java.util.logging.SimpleFormatter;
 @Service
 public class ConsumerService
 {
-      private static final Logger logger = Logger.getLogger("ConsumerService");
 
-      @KafkaListener(topics = {"customer-topic", "another-test-topic"}, groupId = "exam-project")
+      private static final Logger logger = LoggerFactory.getLogger(ConsumerService.class);
+
+      @KafkaListener(topics = {"customer-topic", "restaurant-topic","another-test-topic"}, groupId = "exam-project")
+
       public void consume(String message) throws IOException
       {
             String filePath = "C:\\tmp\\consumerservice-logs\\consumer.log";
@@ -51,4 +53,4 @@ public class ConsumerService
       }
 
 }
-      
+
