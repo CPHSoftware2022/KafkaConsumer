@@ -40,7 +40,7 @@ public class ConsumerService
                   } else if (statusCode >= 400 && statusCode < 500){
                         System.out.println("Log for 400");
                         logger.warning(message);
-                  } else {
+                  } else if (statusCode >= 500 && statusCode < 600) {
                         System.out.println("Log for 500");
                         logger.severe(message);
                   }
