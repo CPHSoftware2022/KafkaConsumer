@@ -18,7 +18,7 @@ public class ConsumerService
 
       private static final Logger logger = Logger.getLogger("ConsumerService");
 
-      @KafkaListener(topics = {"customer-topic", "restaurant-topic", "another-test-topic"}, groupId = "exam-project")
+      @KafkaListener(topics = {"customer-topic", "restaurant-topic", "courier-topic", "another-test-topic"}, groupId = "exam-project")
       public void consume(String message) throws IOException
       {
             String filePath = "C:\\tmp\\consumerservice-logs\\consumer.log";
@@ -40,7 +40,7 @@ public class ConsumerService
                   } else if (statusCode >= 400 && statusCode < 500){
                         System.out.println("Log for 400");
                         logger.warning(message);
-                  } else {
+                  } else if (statusCode >= 500 && statusCode < 600) {
                         System.out.println("Log for 500");
                         logger.severe(message);
                   }
