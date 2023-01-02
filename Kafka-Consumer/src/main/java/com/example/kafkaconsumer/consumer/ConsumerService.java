@@ -33,8 +33,8 @@ public class ConsumerService
                   String status = eventModel.getStatus();
 
                   int statusCode = Integer.parseInt(status.split(" ")[0]);
-                  if (statusCode >= 300 && statusCode < 400){
-                        System.out.println("Log for 300");
+                  if (statusCode >= 200 && statusCode < 400){
+                        System.out.println("Log for 200 / 300");
                         logger.info(message);
                   } else if (statusCode >= 400 && statusCode < 500){
                         System.out.println("Log for 400");
@@ -46,10 +46,7 @@ public class ConsumerService
                         }
                         System.out.println("Log for 500");
                         logger.severe(message);
-                  } else {
-                        logger.fine(message);
                   }
-
             } catch (IOException e) {
                   e.printStackTrace();
             }
