@@ -1,14 +1,13 @@
 package com.example.kafkaconsumer.consumer;
 
 import com.example.kafkaconsumer.model.EventModel;
+import com.example.kafkaconsumer.utils.SendEmail;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.logging.FileHandler;
-import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 
@@ -41,6 +40,11 @@ public class ConsumerService
                         System.out.println("Log for 400");
                         logger.warning(message);
                   } else if (statusCode >= 500 && statusCode < 600) {
+                        if (statusCode == 503) {
+                              SendEmail sendEmail = new SendEmail();
+                              sendEmail.Send_Email("Service Unavailable","mattibenhansen@gmail.com","Service Unavailable: "+eventModel.getResponseBody());
+                        }
+                  } else {
                         System.out.println("Log for 500");
                         logger.severe(message);
                   }
