@@ -44,10 +44,12 @@ public class ConsumerService
                               SendEmail sendEmail = new SendEmail();
                               sendEmail.Send_Email("Service Unavailable","mattibenhansen@gmail.com","Service Unavailable: "+eventModel.getResponseBody());
                         }
-                  } else {
                         System.out.println("Log for 500");
                         logger.severe(message);
+                  } else {
+                        logger.fine(message);
                   }
+
             } catch (IOException e) {
                   e.printStackTrace();
             }

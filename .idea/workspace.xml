@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fe6e1e1-6ce7-4fa6-b5de-8a9fae39aa11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Kafka-Consumer/src/main/java/com/example/kafkaconsumer/utils/SendEmail.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-Consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-Consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kafka-Consumer/src/main/java/com/example/kafkaconsumer/consumer/ConsumerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Kafka-Consumer/src/main/java/com/example/kafkaconsumer/consumer/ConsumerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,11 +36,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/miade/IdeaProjects/ExamProject2022/CPHMTOGO/KafkaConsumer",
+    "last_opened_file_path": "C:/Users/miade/IdeaProjects/ExamProject2022/CPHMTOGO/KafkaConsumer/Kafka-Consumer",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RunManager">
